@@ -12,4 +12,4 @@ export const connection = axios.create({
     baseURL: url
 })
 
-console.log(url)
+console.log(process.env.NODE_ENV)
