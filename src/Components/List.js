@@ -14,7 +14,7 @@ const List = () => {
     }, [])
 
     return (
-        <div className={classes.list}>
+        <div>
             {readings.map((el, i) => (<ListItem index={i+1} element={el}/>))}
         </div>
     )
