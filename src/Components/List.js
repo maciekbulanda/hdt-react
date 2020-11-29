@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
-// import axios from 'axios'
 import * as util from '../utils'
 import ListItem from './ListItem'
+import * as classes from './List.module.css'
 
 const List = () => {
     let [readings, setReadings] = useState([])
@@ -14,8 +14,8 @@ const List = () => {
     }, [])
 
     return (
-        <div>
-            {readings.map(el => (<ListItem element={el}/>))}
+        <div className={classes.list}>
+            {readings.map((el, i) => (<ListItem index={i+1} element={el}/>))}
         </div>
     )
 }

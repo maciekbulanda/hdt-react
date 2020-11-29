@@ -1,10 +1,12 @@
 import React from 'react'
+import * as classes from './ListItem.module.css'
 
 const ListItem = (props) => {
     return (
         <div>
-            <div>{props.element.readingTime}</div>
-            <div>{props.element.readingValue}</div>
+            <div className={classes.item}>{props.index}</div>
+            <div className={classes.item}>{props.element.readingTime}</div>
+            <div className={classes.item}>{props.element.readingValue}</div>
         </div>
     )
 }
